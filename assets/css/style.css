@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cronos-pro';
+    src: url('../fonts/cronospro/Cronos-Pro-Bold-Caption_12429.woff') format('woff');
+}
+
+.container {
+    width: 970px;
+    margin: 2rem auto;
+    height: 250px;
+}
+
+.banner {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(162, 5, 0, 1) 0%, rgba(195, 6, 0, 1) 100%);
+    padding: 0 5rem;
+}
+
+.banner h3 {
+    font-family: 'Cronos-pro';
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: #fff;
+    line-height: 3rem;
+}
+
+.banner h3 span {
+    text-transform: lowercase;
+}
+
+.banner .imgsBanner {
+    display: flex;
+    position: absolute;
+    height: 100%;
+}
+
+.banner .slogan, .banner .logotype {
+    text-align: center;
+    animation: fadeIn 8s infinite;
+    opacity: 0;
+}
+
+.banner .imgsBanner .carne {
+    opacity: 0;
+}
+
+.banner .imgsBanner .position1 {
+    animation: showImg 8s infinite;
+    transform: translateX(-50%);
+}
+
+.banner .imgsBanner .position2 {
+    animation: showImg2 8s infinite;
+    transform: translateX(-100%);
+}
+
+.banner .imgsBanner .position3 {
+    animation: showImg3 8s infinite;
+    transform: translateX(50%);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Efeito imagens */
+
+@keyframes showImg {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    50% {opacity: 0;}
+    75% {opacity: 1;
+        transform: translateX(100%)
+    }
+    100% {opacity: 0;
+    }
+}
+
+@keyframes showImg2 {
+    0% {opacity: 0;}
+    30% {opacity: 0;
+    }
+    50% {opacity: 0;
+        
+    }
+    75% {opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {opacity: 0;
+        
+    }
+}
+
+@keyframes showImg3 {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    50% {opacity: 0;
+        
+    }
+    75% {opacity: 1;
+        transform: translateX(-99%);
+    }
+    100% {opacity: 0;
+        
+    }
+}
